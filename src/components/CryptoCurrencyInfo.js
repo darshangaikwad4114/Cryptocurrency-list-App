@@ -39,10 +39,11 @@ function CryptoCurrencyInfo() {
                     }
                 }
                 tableRows.push(
-                    <tr>
+                    <tr key={index}>
                         {rowItems}
                     </tr>
-                )
+                );
+                return null; // Add this line to fix the eslint problem
             });
             return (
                 <table className="table table-striped table-primary">
